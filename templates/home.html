@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diamond Price Prediction</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="static/css/styles.css" />
+
+    <!-- Custom Styles -->
+    <style>
+      /* Background Styling */
+      body {
+        background-color: #f0f0f0; /* Use a standard background color */
+        color: #000; /* Adjust text color */
+      }
+
+      /* Header Styling */
+      .header {
+        background-color: #007bff;
+        padding: 20px;
+        color: #fff;
+      }
+
+      .header h1 {
+        font-size: 36px;
+      }
+
+      /* Form Styling */
+      .form-container {
+        margin-top: 20px;
+        text-align: center;
+      }
+
+      .form-card {
+        background-color: #f8f9fa;
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      .form-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .form-input {
+        margin-bottom: 15px;
+      }
+
+      .form-input input,
+      .form-input select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Predict Button Styling */
+      .predict-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+      .predict-button:hover {
+        background-color: #0056b3;
+      }
+
+      /* Results Styling */
+      .results {
+        margin-top: 20px;
+        font-size: 24px;
+      }
+
+      /* Image Styling */
+      .image-section {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .diamond-image {
+        max-width: 300px;
+        margin-left: 20px;
+      }
+
+      .your-image {
+        max-width: 200px;
+        margin-right: 20px;
+      }
+
+      /* Footer Styling */
+      .footer {
+        margin-top: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="container">
+        <h1>Diamond Price Prediction</h1>
+      </div>
+    </div>
+
+    <!-- Form Container -->
+    <div class="container form-container">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-card">
+            <h2 class="form-title">
+              Input your features and get your sales prediction
+            </h2>
+            <form action="{{ url_for('predict_datapoint')}}" method="post">
+              <!-- Carat -->
+              <div class="form-input">
+                <h6>Carat:</h6>
+                <input
+                  type="number"
+                  name="carat"
+                  step="0.01"
+                  placeholder="Enter carat value"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Cut -->
+              <div class="form-input">
+                <h6>Cut:</h6>
+                <select name="cut" class="form-control" required>
+                  <option value="Ideal">Ideal</option>
+                  <option value="Premium">Premium</option>
+                  <option value="Very Good">Very Good</option>
+                  <option value="Good">Good</option>
+                  <option value="Fair">Fair</option>
+                </select>
+              </div>
+
+              <!-- Color -->
+              <div class="form-input">
+                <h6>Color:</h6>
+                <select name="color" class="form-control" required>
+                  <option value="D">D</option>
+                  <option value="E">E</option>
+                  <option value="F">F</option>
+                  <option value="G">G</option>
+                  <option value="H">H</option>
+                  <option value="I">I</option>
+                  <option value="J">J</option>
+                </select>
+              </div>
+
+              <!-- Clarity -->
+              <div class="form-input">
+                <h6>Clarity:</h6>
+                <select name="clarity" class="form-control" required>
+                  <option value="IF">IF (Internally Flawless)</option>
+                  <option value="VVS1">
+                    VVS1 (Very, Very Slightly Included 1)
+                  </option>
+                  <option value="VVS2">
+                    VVS2 (Very, Very Slightly Included 2)
+                  </option>
+                  <option value="VS1">VS1 (Very Slightly Included 1)</option>
+                  <option value="VS2">VS2 (Very Slightly Included 2)</option>
+                  <option value="SI1">SI1 (Slightly Included 1)</option>
+                  <option value="SI2">SI2 (Slightly Included 2)</option>
+                  <option value="I1">I1 (Included 1)</option>
+                  <option value="I2">I2 (Included 2)</option>
+                  <option value="I3">I3 (Included 3)</option>
+                </select>
+              </div>
+
+              <!-- Depth -->
+              <div class="form-input">
+                <h6>Depth:</h6>
+                <input
+                  type="number"
+                  name="depth"
+                  step="0.01"
+                  placeholder="Enter depth value"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Table -->
+              <div class="form-input">
+                <h6>Table:</h6>
+                <input
+                  type="number"
+                  name="table"
+                  step="0.01"
+                  placeholder="Enter table value"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- X -->
+              <div class="form-input">
+                <h6>X:</h6>
+                <input
+                  type="number"
+                  name="x"
+                  step="0.01"
+                  placeholder="Enter X value"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Y -->
+              <div class="form-input">
+                <h6>Y:</h6>
+                <input
+                  type="number"
+                  name="y"
+                  step="0.01"
+                  placeholder="Enter Y value"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Z -->
+              <div class="form-input">
+                <h6>Z:</h6>
+                <input
+                  type="number"
+                  name="z"
+                  step="0.01"
+                  placeholder="Enter Z value"
+                  class="form-control"
+                  required
+                />
+              </div>
+
+              <!-- Predict Button -->
+              <div class="form-input">
+                <input
+                  type="submit"
+                  value="Get Prediction"
+                  class="btn btn-primary predict-button"
+                />
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Diamond Image Section -->
+        <div class="col-sm-6 image-section">
+          <img
+            src="./../images/blue.jpg"
+            alt="DiamondImage"
+            class="diamond-image"
+          />
+          <img src="/images/ayo-pic.jpg" alt="Your Iage" class="your-image" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Results Display -->
+    <div class="container results">
+      <h3>{{ results }}</h3>
+    </div>
+
+    <!-- Footer -->
+    <div class="container footer">
+      <p>Designed By: Ayodele Ayodeji</p>
+    </div>
+
+    <!-- Bootstrap and JavaScript -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
