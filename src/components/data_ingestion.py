@@ -4,7 +4,7 @@ from src.exception import CustomException
 from src.logger import logging
 
 from src.components.data_transformation import DataTransformation
-
+from src.components.model_trainer import ModelTrainer
 import pandas as pd
 from sklearn.model_selection import train_test_split
 
@@ -60,7 +60,8 @@ if __name__=="__main__":
     raw_data_imgestion=obj.initiate_data_ingestion()
 
     obj2=DataTransformation()
-    train_arr,test_arr,obj_file_path=obj2.initaite_data_transformation()
+    train_arr,test_arr,obj_file_path=obj2.initaite_data_transformation(train_path=raw_data_imgestion[1],  # Provide the train data path
+        test_path=raw_data_imgestion[2]  )
    
     obj3=ModelTrainer()
-    print(obj3.initiate_model_trainer(train_arr,test_arr))
+    print(obj3.initate_model_training(train_arr,test_arr))
