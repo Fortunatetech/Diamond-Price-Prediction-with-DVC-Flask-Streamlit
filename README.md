@@ -4,7 +4,7 @@
 
 # Diamond Price Prediction
 
-![Diamond](diamond.jpg)
+![Diamond](/images/blue.jpg)
 
 ## Table of Contents
 
@@ -39,29 +39,53 @@ To run this project locally, follow these steps:
    cd diamond-price-prediction
 
 2. Create a virtual environment and install dependencies:
+
    python -m venv venv
    source venv/bin/activate # On Windows, use `venv\Scripts\activate`
    pip install -r requirements.txt
 
-   [Optional] Install DVC and set up DVC remotes for dataset version control.
+3. [Optional] Install DVC and set up DVC remotes for dataset version control.
 
+## Getting Started
 
-Usage
-Access the Flask web application via your browser.
+Before running the Flask web application, you'll need to follow these steps:
 
-Enter the diamond's features: carat, cut, color, clarity, depth, table, x, y, and z.
+## Data Version Control (DVC)
 
-Click the "Get Prediction" button to obtain the predicted diamond price.
+1. Initialize DVC and set up DVC remotes for data storage:
+   'dvc init'
+2. Add your data source (e.g., a URL or local path) to DVC:
+   dvc add data/diamonds.csv
+3. Commit your code:
+   dvc commit -m "Add dataset"
+4. Push the data to a DVC remote (e.g., AWS S3 or Google Cloud Storage):
+   dvc push
 
-Contributing
+## Running the Flask Web App
+
+python app.py
+The web app should now be running locally. Access it in your web browser at http://localhost:5000.
+
+## Usage
+
+1. Access the Flask web application via your browser.
+
+2. Enter the diamond's features: carat, cut, color, clarity, depth, table, x, y, and z.
+
+3. Click the "Get Prediction" button to obtain the predicted diamond price.
+
+## Contributing
+
 Contributions are welcome! If you want to contribute to this project, please follow the contribution guidelines.
 
-License
+## License
+
 This project is licensed under the MIT License.
 
-Contact Information
+## Contact Information
+
 For any questions or inquiries, feel free to reach out:
 
-GitHub: Your GitHub Profile
-LinkedIn: Your LinkedIn Profile
-Email: your.email@example.com
+- GitHub: [Your GitHub Profile](https://github.com/Fortunatetech)
+- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/ayo-ayodeji/)
+- Email: your.ayodeleayode250@gmail.com
