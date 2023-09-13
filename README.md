@@ -10,7 +10,7 @@
 - [Data Version Control (DVC)](#data-version-control-dvc)
 - [Running the Flask Web App](#running-the-flask-web-app)
 - [Usage](#usage)
-- [Project Demo](#project demo)
+- [Project Demo](#project-demo)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact Information](#contact-information)
