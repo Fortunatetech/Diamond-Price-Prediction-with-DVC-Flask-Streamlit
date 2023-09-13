@@ -44,3 +44,24 @@ To run this project locally, follow these steps:
    pip install -r requirements.txt
 
    [Optional] Install DVC and set up DVC remotes for dataset version control.
+
+
+Usage
+Access the Flask web application via your browser.
+
+Enter the diamond's features: carat, cut, color, clarity, depth, table, x, y, and z.
+
+Click the "Get Prediction" button to obtain the predicted diamond price.
+
+Contributing
+Contributions are welcome! If you want to contribute to this project, please follow the contribution guidelines.
+
+License
+This project is licensed under the MIT License.
+
+Contact Information
+For any questions or inquiries, feel free to reach out:
+
+GitHub: Your GitHub Profile
+LinkedIn: Your LinkedIn Profile
+Email: your.email@example.com
