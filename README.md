@@ -1,10 +1,8 @@
-## Diamond-Price-Prediction MAchine
+# Diamond Price Prediction Machine
+![Diamond](/images/blue.jpg)
+
 
 [diamond price prediction.webm](https://github.com/Fortunatetech/Diamond-Price-Prediction-with-DVC-Flask-Streamlit/assets/104451288/572d6e4c-dcb7-41da-bfe6-628e7361b2d0)
-
-# Diamond Price Prediction
-
-![Diamond](/images/blue.jpg)
 
 ## Table of Contents
 
@@ -35,14 +33,14 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 
-   git clone https://github.com/Fortunatetech/Diamond-Price-Prediction-with-DVC-Flask-Streamlit.git
-   cd diamond-price-prediction
+   - git clone https://github.com/Fortunatetech/Diamond-Price-Prediction-with-DVC-Flask-Streamlit.git
+   - cd diamond-price-prediction
 
 2. Create a virtual environment and install dependencies:
 
-   python -m venv venv
-   source venv/bin/activate # On Windows, use `venv\Scripts\activate`
-   pip install -r requirements.txt
+   - python -m venv venv
+   - source venv/bin/activate # On Windows, use `venv\Scripts\activate`
+   - pip install -r requirements.txt
 
 3. [Optional] Install DVC and set up DVC remotes for dataset version control.
 
