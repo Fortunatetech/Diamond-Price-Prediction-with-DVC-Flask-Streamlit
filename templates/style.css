@@ -1,0 +1,106 @@
+* {
+  transition: all 0.1s linear;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: #000;
+  padding: 20px 0;
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 28px;
+}
+
+.navbar-nav {
+  margin-top: 10px;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Hero Section Styling */
+.hero {
+  background-image: url("diamond-background.jpg");
+  /* Replace with your background image URL */
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+  padding: 100px 0;
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+/* About Section Styling */
+.about {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+}
+
+.about p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.about img {
+  max-width: 200px;
+  margin-top: 20px;
+}
+
+/* Contact Section Styling */
+.contact {
+  background-color: #f8f9fa;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 36px;
+}
+
+.contact p {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-details a {
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+/* Footer Styling */
+.footer {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+}
