@@ -86,6 +86,6 @@ This project is licensed under the MIT License.
 
 For any questions or inquiries, feel free to reach out:
 
-- GitHub: [Your GitHub Profile](https://github.com/Fortunatetech)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/ayo-ayodeji/)
-- Email: your.ayodeleayode250@gmail.com
+- GitHub: [GitHub](https://github.com/Fortunatetech)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ayo-ayodeji/)
+- Email: ayodeleayode250@gmail.com
