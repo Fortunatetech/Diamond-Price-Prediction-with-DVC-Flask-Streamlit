@@ -35,7 +35,12 @@ To run this project locally, follow these steps:
 
 1. Clone the repository:
 
-   ```bash
-   git clone https://github.com/yourusername/diamond-price-prediction.git
+   git clone https://github.com/Fortunatetech/Diamond-Price-Prediction-with-DVC-Flask-Streamlit.git
    cd diamond-price-prediction
-   ```
+
+2. Create a virtual environment and install dependencies:
+   python -m venv venv
+   source venv/bin/activate # On Windows, use `venv\Scripts\activate`
+   pip install -r requirements.txt
+
+   [Optional] Install DVC and set up DVC remotes for dataset version control.
