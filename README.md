@@ -10,6 +10,7 @@
 - [Data Version Control (DVC)](#data-version-control-dvc)
 - [Running the Flask Web App](#running-the-flask-web-app)
 - [Usage](#usage)
+- [Project Demo](#project demo)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact Information](#contact-information)
@@ -68,6 +69,9 @@ The web app should now be running locally. Access it in your web browser at http
 2. Enter the diamond's features: carat, cut, color, clarity, depth, table, x, y, and z.
 
 3. Click the "Get Prediction" button to obtain the predicted diamond price.
+
+## Project Demo
+[diamond price prediction.webm](https://github.com/Fortunatetech/Diamond-Price-Prediction-with-DVC-Flask-Streamlit/assets/104451288/572d6e4c-dcb7-41da-bfe6-628e7361b2d0)
 
 ## Contributing
 
